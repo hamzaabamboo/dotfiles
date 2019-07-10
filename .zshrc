@@ -3,6 +3,8 @@ source "${HOME}/.zgen/zgen.zsh"
 # import other dotfiles
 source "${HOME}/dotfiles/.aliases"
 source "${HOME}/dotfiles/.functions"
+source "${HOME}/dotfiles/env.sh"
+
 # init nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -30,8 +32,14 @@ if ! zgen saved; then
   zgen prezto fasd
   zgen prezto syntax-highlighting 
   zgen prezto docker
-  zgen prezto docker-compose
-  zgen prezto autosuggestions 
+  # zgen prezto docker-compose
+  zgen prezto autosuggestions
+  zgen prezto editor
+  zgen prezto prompt
+  zgen prezto utility
+  zgen prezto editor
+  zgen prezto terminal
+
   zgen load mafredri/zsh-async
   zgen load junegunn/fzf shell
 
