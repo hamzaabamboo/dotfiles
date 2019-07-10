@@ -8,8 +8,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # init pyenv
 export PATH="/home/hamzaabamboo/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:$HOME/.yarn/bin"
 export ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
@@ -27,10 +27,11 @@ if ! zgen saved; then
   
   zgen prezto git
   zgen prezto command-not-found
-  #zgen prezto fasd
+  zgen prezto fasd
   zgen prezto syntax-highlighting 
-  
-  zgen load denysdovhan/spaceship-prompt spaceship
+  zgen prezto docker
+  zgen prezto docker-compose
+  zgen prezto autosuggestions 
   zgen load mafredri/zsh-async
   zgen load junegunn/fzf shell
 
@@ -40,3 +41,4 @@ if ! zgen saved; then
   # generate the init script from plugins above
   zgen save
 fi
+ zgen load denysdovhan/spaceship-prompt spaceship
