@@ -1,18 +1,22 @@
-# load zgen
+#load zgen
 source "${HOME}/.zgen/zgen.zsh"
 # import other dotfiles
 source "${HOME}/dotfiles/.aliases"
 source "${HOME}/dotfiles/.functions"
 source "${HOME}/dotfiles/env.sh"
 
+eval "$(pyenv init -)"
+alias please='sudo $(fc -ln -1)'
 # init nvm
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/usr/local/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # init pyenv
 export PATH="/home/hamzaabamboo/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 
+export PATH="$PATH:$HOME/sdk/flutter/bin"
+export PATH="$PATH":"$HOME/sdk/flutter/.pub-cache/bin"
 export PATH="$PATH:$HOME/.yarn/bin"
 export ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
 export DEFAULT_USER="hamzaabamboo"
