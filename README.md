@@ -11,7 +11,7 @@ My own terminal configuration using zsh and zgen
 ## Installation
 
 - clone this repo to home folder
-- `ln -s dotfiles/.zshrc ./zshrc`
+- `ln -s dotfiles/.zshrc ./.zshrc`
 - `source ~/.zshrc`
 
 ## Misc
@@ -26,6 +26,8 @@ My own terminal configuration using zsh and zgen
 ### MacOS
 
 - install `brew` `alfred` and install above software with brew
+- `brew install —cask iterm2 google-chrome gitkraken alfred slack discord docker spotify cheatsheet`
+- `brew install oh-my-zsh nvm`
 
 ### Linux
 
