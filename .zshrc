@@ -4,15 +4,14 @@ source "${HOME}/.zgen/zgen.zsh"
 source "${HOME}/dotfiles/.aliases"
 source "${HOME}/dotfiles/.functions"
 source "${HOME}/dotfiles/env.sh"
-
-eval "$(pyenv init -)"
 alias please='sudo $(fc -ln -1)'
 # init nvm
 export NVM_DIR="/usr/local/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # init pyenv
 export PATH="/home/hamzaabamboo/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
+
+eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:$HOME/sdk/flutter/bin"
